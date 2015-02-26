@@ -1,0 +1,30 @@
+/**
+
+  @body
+--------------------------------------------------------
+  elements/_body.scss
+--------------------------------------------------------
+
+  Body should contain the document's default font and
+  background color for the content, if that background
+  color is different than the html.
+
+------------------------------------------------------ */
+
+
+body {
+  line-height: $base-line-height;
+  padding: 0 2%;
+  @include bp(x-large) {
+    padding: 0;
+  }
+}
+
+.b-365 {
+  background: url(img/bg.png) 0 0 repeat;
+}
+
+.training {
+  padding: 0;
+  background: url(img/crossword.png) 0 0 repeat;
+}

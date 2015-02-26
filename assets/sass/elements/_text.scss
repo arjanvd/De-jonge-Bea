@@ -1,0 +1,69 @@
+/**
+
+  @text
+--------------------------------------------------------
+  elements/_text.scss
+--------------------------------------------------------
+
+  Some basic styles to paragraphs and
+  inline styles
+
+-----------------------------------------------------  */
+
+
+
+
+
+/* @paragraphs
+--------------------------------------------------------
+
+  Example: Paragraphs
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+--------------------------------------------------------  */
+
+p {
+  margin-bottom: vr($base-line-multi);
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+@if $paragraph-indent {
+  p + p {
+    margin-top: vr($base-line-multi * -1);
+    text-indent: vr($base-line-multi);
+  }
+}
+
+
+
+
+
+/* @inline
+--------------------------------------------------------
+
+  Common inline elements
+
+  Example: inline elements
+  <p>Lorem Ipsum is <b>bold</b> text of the <strong>strong</strong> printing and typesetting industry. Lorem Ipsum is <i>italic</i> simply dummy text <em>emphasized</em> of the printing and typesetting industry.</p<
+
+-------------------------------------------------------- */
+
+b,
+strong {
+  // NOTE: use bold font-face if available instead of 'font-weight: bold'
+  font-weight: bold;
+}
+
+
+i,
+em {
+  // NOTE: use italic font-face if available instead of 'font-style: italic'
+  font-style: italic;
+}
